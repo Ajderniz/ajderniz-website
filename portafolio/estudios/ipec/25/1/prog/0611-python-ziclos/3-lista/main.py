@@ -1,0 +1,10 @@
+lista = [ 1, 4, 6, 8, 5, 4, 9, 4, 2 ]
+lista.append(4)
+lista.insert(1, 7)
+longitud = len(lista)
+print("Índice de 8: " + str(lista.index(8)))
+print("Mayor valor en lista: " + str(max(lista)))
+print("Menor valor en lista: " + str(min(lista)))
+print("Veces que aparece el número 4: " + str(lista.count(4)))
+lista.reverse()
+lista.remove(9)

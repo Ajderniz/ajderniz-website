@@ -1,0 +1,39 @@
+<!-- break -->
+<div class=bluebox>
+	<p>
+  A recap of a little introduction we got from le teach:
+	</p>
+  <p>
+  You have your rings, your stars, your buses and your meshes:
+  </p>
+  <ul>
+    <li>
+    <b>Rings</b> consist of a series of hosts connected to each other in a
+    linear manner. This topology loops, hence the name. These are not very
+    stable, mostly because of potential connection failures.
+    </li>
+    <li>
+    <b>Stars</b> have a core host, which acts as the "heart" of the server. To
+    this core is connected a series of outer hosts. Each is connected to the
+    core via one separate line. This is a centralized topology.
+    </li>
+    <li>
+    <b>Buses</b> are a linear topology, like rings. This topology does not loop,
+    however, making it even more fragile than the ring topology.
+    </li>
+    <li>
+    <b>Meshes</b> are a decentralized topology, consisting of a series of hosts
+    interconnected in an unorganized manner. This topology is much more reliable
+    than any of the others previously discussed, but is, in turn, more costly
+    and difficult to set up. This topology, however, is quite common.
+    </li>
+  </ul>
+</div>
+
+<h2>THE WORD SEARCH THING</h2>
+<div class=bluebox>
+  <p>
+  I don't know how many years it's been since I last did one of these.
+  </p>
+  <img src="word_search.jpeg" alt="just imagine it here">
+</div>

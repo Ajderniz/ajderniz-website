@@ -1,0 +1,11 @@
+"SuperScan"
+
+"SuperScan" es una herramienta un poco más compleja que "en-map". Viene
+instalada por defecto en muchos sistemas operativos, y consiste en una
+recopilación de varias herramientas de escaneo de puertos, unificada bajo una
+interfaz gráfica de usuario tan fea como Windows 11 mismo.
+
+Nuevamente, acá hay una lista, que se tienen que memorizar, de algunas de las
+funciones de "SuperScan": velocidad ajustable de escaneo, escaneo de "TCP SYN",
+escaneo de "UDP", resolución de "hostname", generación de reportes en formato
+"HTML". Cosas básicas de siempre.

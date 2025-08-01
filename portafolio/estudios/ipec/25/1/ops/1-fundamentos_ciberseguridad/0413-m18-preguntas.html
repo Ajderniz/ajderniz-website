@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/res/css/style.css">
+	<title>
+	Cybserecuty Essentials 18: Cifrado
+	</title>
+</head>
+
+<body>
+<main>
+
+<h2><a href="/">AJDERNIZ</a></h2>
+
+<h3>
+Ciberseguridad<br>
+Alumno: Axel López<br>
+Grupo: IC<br>
+Profesor: Johel Solano Quirós
+</h3>
+
+<h2>Cybersecurity Essentials</h2>
+<h1>Módulo 18: Cifrado</h1>
+
+<h2>Parte 1: Conceptos Básicos</h2>
+<h3>1.1 Definición de Encriptación</h3>
+<div class=bluebox>
+	<ol>
+		<li>
+			<p><b>
+			Define la encriptación y su propósito en la
+			ciberseguridad. ¿Por qué es fundamental en la protección
+			de datos?
+			</b></p>
+			<p>
+			Es el acto de ocultar datos bajo algún procedimiento
+			ordenado, con el fin de que únicamente quien esté
+			autorizado a verlo, sea capaz de hacerlo.
+			</p>
+			<p>
+			Es fundamental en la ciberseguridad, porque ayuda a
+			cumplir, primariamente con el principio de
+			confidencialidad, y con un poco de consideración, los de
+			autenticación e integridad, que están relacionados.
+			</p>
+		</li>
+		<li>
+			<p><b>
+			Explica la diferencia entre datos en reposo y datos en
+			tránsito. Incluye ejemplos de cada uno.
+			</b></p>
+			<p>
+			Los datos en reposo se encuentran almacenados. Ejemplo:
+			información almacenada en una base de datos.
+			</p>
+			<p>
+			Los datos en tránsito están en proceso actual de
+			transferencia. Ejemplo: un documento que se está
+			descargando.
+			</p>
+		</li>
+	</ol>
+</div>
+
+<h3>1.2 Clasificación de la Encriptación</h3>
+<div class=bluebox>
+	<h4>Encriptación Simétrica</h4>
+	<ol>
+		<li>
+			<p><b>
+			Define la encriptación simétrica. Describe su
+			funcionamiento y menciona la necesidad de compartir una
+			clave secreta.
+			</b></p>
+			<p>
+			El cifrado simétrico debe su nombre a la necesidad de
+			compartir una clave secreta entre los participantes del
+			proceso de transferencia.
+			</p>
+			<p>
+			A grandes rasgos, el cifrado simétrico opera con una
+			única clave, la cual sirve tanto para cifrar como para
+			descifrar un bloque de información.
+			</p>
+		</li>
+		<li>
+			<p><b>
+			Proporciona ejemplos de algoritmos simétricos, como DES,
+			3DES y AES. Describe sus ventajas y desventajas, así
+			como sus aplicaciones típicas.
+			</b></p>
+			<table class=bluebox>
+			<tbody>
+				<tr>
+					<th colspan="3">
+					AES: Advanced Encryption Standard
+					</th>
+				</tr>
+				<tr>
+					<th>Ventajas</th>
+					<th>Desventajas</th>
+					<th>Aplicaciones</th>
+				</tr>
+				<tr>
+					<td>
+					<ul>
+						<li>
+						Claves largas (de 128, 192 y 256
+						bits)
+						</li>
+						<li>Comúnmente utlizado</li>
+						<li>Difícil de forzar</li>
+					</ul>
+					</td>
+					<td>
+					<ul>
+						<li>
+						Su estructura algebráica es muy
+						sencilla
+						</li>
+						<li>
+						Todos los bloques se cifran del
+						mismo modo
+						</li>
+					</ul>
+					</td>
+					<td>
+					<ul>
+						<li>
+						Herramientas de archivo y de
+						compresión
+						</li>
+						<li>
+						Cifrado de sistemas de archivos
+						</li>
+						<li>
+						Cifrado de discos y particiones
+						</li>
+					</ul>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<table class=bluebox>
+			<tbody>
+				<tr>
+					<th colspan="3">
+					DES: Data Encryption Algorithm
+					</th>
+				</tr>
+				<tr>
+					<th>Ventajas</th>
+					<th>Desventajas</th>
+					<th>Aplicaciones</th>
+				</tr>
+				<tr>
+					<td>
+					<ul>
+						<li>
+						Diseñado para ser muy eficiente
+						</li>
+						<li>
+						Ampliamente documentado e
+						implementado a lo largo del
+						tiempo
+						</li>
+						<li>
+						Es un estándar de ANSI e ISO
+						</li>
+					</ul>
+					</td>
+					<td>
+					<ul>
+						<li>
+						Utiliza claves muy cortas
+						</li>
+						<li>
+						Vulnerable ante ataques de
+						fuerza bruta
+						</li>
+					</ul>
+					</td>
+					<td>
+					No es utilizado a menudo en la
+					actualidad.
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<table class=bluebox>
+			<tbody>
+				<tr>
+					<th colspan="3">
+					3DES: Data Encryption Algorithm
+					</th>
+				</tr>
+				<tr>
+					<th>Ventajas</th>
+					<th>Desventajas</th>
+					<th>Aplicaciones</th>
+				</tr>
+				<tr>
+					<td>
+					<ul>
+						<li>
+						Es más fuerte que su versión no
+						iterada
+						</li>
+						<li>
+						Altamente compatible con otros
+						sistemas que implementan DES
+						</li>
+						<li>
+						Usa claves de varios tamaños
+						</li>
+					</ul>
+					</td>
+					<td>
+					<ul>
+						<li>
+						Muy lento en comparación con
+						métodos de cifrado modernos
+						</li>
+						<li>
+						No es suficientemente seguro
+						ante el poder computacional de
+						la actualidad
+						</li>
+					</ul>
+					</td>
+					<td>
+					<ul>
+						<li>Protección de datos</li>
+						<li>VPN</li>
+						<li>Firmas digitales</li>
+					</ul>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</li>
+	</ol>
+	<h4>Encriptación Asimétrica:</h4>
+	<ol>
+		<li>
+			<p><b>
+			Define la encriptación asimétrica. Explica cómo funciona
+			el sistema de clave pública y clave privada.
+			</b></p>
+			<p>
+			El cifrado asimétrico, a diferencia del simétrico, usa
+			dos claves para cumplir el cometido de cifrar y
+			descifrar información.
+			</p>
+			<p>
+			Usualmente, una de las dos claves se usa para cifrar la
+			información, mientras que la otra la descifra. Esto
+			permite que no sea necesario compartir una clave
+			secreta, incrementando la seguridad.
+			</p>
+		</li>
+		<li>
+			<p><b>
+			Menciona algoritmos como RSA y PKI, y analiza sus
+			ventajas, desventajas y aplicaciones en el mundo real
+			</b></p>
+			<table class=bluebox>
+			<tbody>
+				<tr>
+					<th colspan="3">
+					RSA: Rivest-Shamir-Adleman
+					</th>
+				</tr>
+				<tr>
+					<th>Ventajas</th>
+					<th>Desventajas</th>
+					<th>Aplicaciones</th>
+				</tr>
+				<tr>
+					<td>
+					<ul>
+						<li>
+						Es un método bastante robusto
+						ante ataques de fuerza bruta
+						</li>
+						<li>
+						Implementado ampliamente, por lo
+						que es fácil de integrar
+						</li>
+					</ul>
+					</td>
+
+					<td>
+					<ul>
+						<li>
+						Más lento que AES (un método de
+						cifrado simétrico)
+						</li>
+						<li>
+						No es muy bueno con grandes
+						cantidades de datos
+						</li>
+						<li>
+						Posiblemente vulnerable ante
+						ataques basados en computación
+						cuántica
+						</li>
+					</ul>
+					</td>
+
+					<td>
+					<ul>
+						<li>
+						Aplicaciones de comunicación web
+						seguras, como HTTPS
+						</li>
+						<li>
+						Cifrado de correo electrónico
+						</li>
+						<li>
+						Firmas digitales
+						</li>
+					</ul>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<p>PKI no es un algoritmo de cifrado.</p>
+		</li>
+	</ol>
+</div>
+
+<h2>Parte 2: Ejemplos y Aplicaciones</h2>
+<h3>2.1 Ejemplo de Encriptación Simétrica</h3>
+<div class=bluebox>
+	<p><b>
+	Elige un ejemplo de encriptación simétrica y explícalo. Agrega detalles
+	sobre cómo se establece la comunicación segura y los beneficios de este
+	método.
+	</b></p>
+	<p>
+	Este tipo de preguntas incentivan el uso de ChatGPT. Algo me dice que
+	este cuestionario también fue hecho con ChatGPT. Aquí está mi respuesta,
+	grandemente apoyada por ChatGPT:
+	</p>
+	<h4>Ejemplo en detalle</h4>
+	<ol>
+		<li>
+		<b>Saludo (<i>HELLO</i>)</b>: La aplicación cliente, como un
+		navegador web, inicia una conexión con un servidor, y pide una
+		conección segura.
+		</li>
+		<li>
+		<b>Certificado del servidor</b> El servidor responde enviando su
+		certificado, dentro del cual aparece una clave pública, y una
+		firma de una Autoridad de Certificación.
+		</li>
+		<li>
+		<b>Verificación del certificado</b>: El cliente (navegador web)
+		verifica la validez del certificado.
+		</li>
+		<li>
+		<b>Generación de la clave de sesión</b>: El cliente genera una
+		clave simétrica de sesión.
+		</li>
+		<li>
+		<b>Cifrado de la clave de sesión</b>: El cliente usa la clave
+		pública del servidor para cifrar la clave simétrica recién
+		generada, y la envía al servidor.
+		</li>
+		<li>
+		<b>Descifrado de la clave de sesión</b>: El servidor usa su
+		clave privada para descrifrar la clave de sesión generada por el
+		cliente.
+		</li>
+		<li>
+		<b>Conexión segura</b>: Ahora ambas partes comparten la clave
+		simétrica, y pueden comunicarse por medio de mensajes cifrados.
+		</li>
+	</ol>
+	<h4>Beneficios</h4>
+	<ul>
+		<li>
+		<b>Conficencialidad</b>: La información se hace privada gracias
+		al cifrado simétrico.
+		</li>
+		<li>
+		<b>Autenticidad</b>: El cliente es capaz de verificar la
+		identidad del servidor por medio de su certificado.
+		</li>
+		<li>
+		<b>Eficiencia</b>: Utiliza el cifrado asimétrico para establcer
+		la conexión y poder utilizar cifrado simétrico, el cual es más
+		rápido.
+		</li>
+	</ul>
+</div>
+
+<h3>2.2 Ejemplo de Encriptación Asimétrica</h3>
+<div class=bluebox>
+	<p><b>
+	Describe un caso en el que se utiliza la encriptación asimétrica para
+	realizar una transacción en línea. Analiza cómo la clave pública se
+	utiliza para garantizar la confidencialidad y cómo la clave privada
+	asegura que solo el detinatario pueda acceder a la información.
+	</b></p>
+	<p>
+	Explicado en la respuesta anterior.
+	</p>
+</div>
+
+<h2>Parte 3: Comparación y Crítica</h2>
+<h3>3.1 Ventajas y Desventajas</h3>
+<div class=bluebox>
+	<p><b>
+	Realiza una tabla comparativa que enumere las
+	principales ventajas y desventajas de la encriptación
+	simétrica en comparación con la asimétrica, enfocándote
+	en factores como:
+		<ul>
+			<li>Velocidad y eficiencia</li>
+			<li>Seguridad y vulnerabilidades</li>
+			<li>Aplicaciones en el mundo real</li>
+		</ul>
+	</b></p>
+	<table class=bluebox>
+	<tbody>
+		<tr>
+			<td></td>
+			<th>Simétrica</th>
+			<th>Asimétrica</th>
+		</tr>
+		<tr>
+			<th>Velocidad y eficiencia</th>
+			<td>
+			Más eficiente debido a su menor complejidad
+			</td>
+			<td>
+			No es eficiente, ya que requiere de una cantidad mayor
+			de operaciones para poder cifrar y descifrar infomación.
+			</td>
+		</tr>
+		<tr>
+			<th>Seguridad y vulnerabilidades</th>
+			<td>
+			Vulnerable, dado principalmente a que la clave
+			compartida puede ser interceptada.
+			</td>
+			<td>
+			Más segura, ya que la clave privada y la clave pública
+			operan en conjunto, pero no pueden revertir por sí
+			mismas el cifrado.
+			</td>
+		</tr>
+		<tr>`
+			<th>Aplicaciones en el mundo real</th>
+			<td>
+			Debido a su mayor velocidad, es más utilizada en
+			comunicaciones donde hay grandes cantidades de datos.
+			</td>
+			<td>
+			A pesar de ser más lenta, se utiliza en conjunto con el
+			cifrado simétrico para realizar transacciones de claves
+			compartidas. También se usa en el ámbito de las firmas
+			digitales.
+			</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+
+<h3>3.2 Casos de Uso</h3>
+<div class=bluebox>
+	<p><b>
+	Investiga y presenta tres casos de uso donde la encriptación ha fallado
+	o ha sido comprometida. Analiza las consecuencias de estos fallos y cómo
+	podrían haberse evitado.
+	</b></p>
+	<h4>Heartbleed (2014)</h4>
+	<p>
+	Se introdujo una vulnerabilidad a la extensión <i>heartbleed</i>, de
+	OpenSSL, la cual permitió que unos atacantes lograran extraer datos
+	de todos los servidores afectados por ésta. Como resultado, muchas
+	claves privadas fueron reveladas, y credenciales, además de otros
+	conjuntos de información privada, expuestos. Este fallo pudo haber sido
+	prevenido si se hubiera aplicado mayor rigor a la hora de probar el
+	código de la extensión.
+	</p>
+	<h4>Equifax (2017)</h4>
+	<p>
+	Unos atacantes lograron aprovechar una vulnerabilidad encontrada en la
+	aplicación web de Equifax. Algunos datos estaban cifrados, pero no lo
+	suficiente, porque no se daban buenas prácticas de rotación de claves, y
+	se usaban protocolos no muy robustos. Como resultado, la organización,
+	pobrecita, perdió mucha plata, y mucha información fue revelada. Este
+	fallo se pudo haber evitado, de haber implementado un mayor control de
+	pruebas en su aplicación web, así como la implementación de protocolos
+	de cifrado más robustos y de cambio de claves más frecuente.
+	</p>
+	<h4>Heartland (2008)</h4>
+	<p>
+	El primer ataque se dio en 2008, cuando unos atacantes lograron inyectar
+	<i>malware</i> en la base de datos SQL del sitema de pago Heartland, de
+	modo tal que pudieron extraer información descifrada de muchas tarjetas
+	de crédito. Mucha información fue perdida, y mucha gente salió rascando,
+	me imagino; pero como siempre, pobrecita la organización, que es la que
+	siempre sufre. El problema se pudo haber evitado NO ALMACENANDO DATOS DE
+	TARJETAS DE CRÉDITO EN UNA BASE DE DATOS.
+	</p>
+</div>
+
+<h2>Parte 4: Importancia en la Ciberseguridad</h2>
+<h3>4.1 Protección de Datos Sensibles</h3>
+<div class=bluebox>
+	<p><b>
+	Explica cómo la encriptación protege la confidencialidad de la
+	información en diferentes sectores (bancos, comercio electrónico, etc.).
+	Utiliza ejemplos para respaldar tus afirmaciones.
+	</b></p>
+	<h4>Bancos</h4>
+	<p>
+	Los bancos usan protocolos de cifrado, como SSL/TLS para llevar a cabo
+	transacciones seguras en línea.
+	</p>
+
+	<h4>Comercio electrónico</h4>
+	<p>
+	Los negocios en línea que también llevan a cabo transacciones
+	incorporadas dentro de su sistema de compras, usan el cifrado para
+	ocultar información de pago y personal.
+	</p>
+
+	<h4>Salud</h4>
+	<p>
+	Debido a regulaciones de privacidad en la salud, es importante que la
+	información relacionada a la salud de las personas sea vista únicamente
+	por las personas autorizadas. Este es otro ámbito en el que se usa el
+	cifrado para lograr este cometido.
+	</p>
+</div>
+
+<h3>4.2 Regulaciones y Normativas</h3>
+<div class=bluebox>
+	<p><b>
+	Investiga las regulaciones existentes que obligan el uso de encriptación
+	para la protección de datos (por ejemplo, GDPR, PCI-DSS). Describe cómo
+	estas regulaciones afectan a las empresas y a la implementación de
+	medidas de ciberseguridad.
+	</b></p>
+	<h4>GDPR</h4>
+	<p>
+	Hace obligatoria la implementación de medidas apropiadas, dentro de las
+	cuales se incluye al cifrado, para que la información esté segura.
+	</p>
+
+	<h4>PCI-DSS</h4>
+	<p>
+	Significa "<i>Payment Card Industry Data Security Standard</i>", y como
+	sugiere el nombre, está relacionado con el manejo de datos financieros y
+	transacciones.
+	</p>
+
+	<h4>Impacto</h4>
+	<p>
+	La presencia de tantas regulaciones incrementa la conciencia y posición
+	ética de la sociedad con respecto a la importancia de la privacidad.
+	Aunque no creo que le importe un pepino a las compañías. A muchas, más
+	bien se les hace más difícil gestionar correctamente la información
+	privada y, de vez en cuando (siempre), hasta la venden.
+	</p>
+</div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+[blog]
+  description = El blog de Ajderniz contiene de todo i no sabe a nada
+  keywords = void, empty, nothing, blog
+  lang = es
+  posts = 10
+  style = basic.css
+  subtitle = ("AJDERNIZ" se pronunzia "AIDERNIZ")
+  theme = basic.html
+  title = EL BLOG DE AJDERNIZ
+[color]
+  list = false
+  log = false
+[core]
+  doctype = html
+  editor = vim
+  encoding = UTF-8
+  extension = html
+[feed]
+  baseurl = http://ajderniz.xyz/blog/
+  fullposts = true
+  posts = 10
+[post]
+  author = top
+  date = top
+  tags = top
+[user]
+  email = ajderniz@protonmail.com
+  name = Axel Lopez
+  nickname = Ajderniz

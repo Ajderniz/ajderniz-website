@@ -1,0 +1,9 @@
+<!-- break -->
+<div class=bluebox>
+	<p>
+  Here's a collection of basic baby stuff we did today:
+	</p>
+  <img src="crossword.png" alt="crossword" width="550">
+  <img src="word_soup.png" alt="word soup" width="550">
+  <a href="reading_practice.pdf">Reading practice PDF</a>
+</div>

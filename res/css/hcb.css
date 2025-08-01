@@ -1,0 +1,102 @@
+#HCB_comment_box textarea {
+}
+
+/* the entire html comment box container. applies to everything */
+#HCB_comment_box {
+	font-family: serif;
+}
+
+#HCB_comment_box p.error {
+  border: 2px solid white;
+  background-color: red;
+  color: white;
+}
+
+#HCB_comment_box textarea, #HCB_comment_box input.text {
+  border: 1px solid #ddd;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  background: url(bg.png) repeat-x;
+}
+
+#HCB_comment_box .hcb-wrapper-half {
+  display:block;
+  width:50%;
+  float:left;
+}
+#HCB_comment_box .hcb-wrapper {
+  clear:both;
+  margin-bottom:0.5em;
+}
+#HCB_comment_box input.text {
+  display:block;
+  width:97%;
+}
+/* the submit button */
+#HCB_comment_box input.submit {
+    margin:0 7px 3px 0;
+    background-color:#f5f5f5;
+    border:1px solid #ccc;
+    border-top:1px solid #ddd;
+    border-left:1px solid #ddd;
+    font-family: sans;
+    font-size:100%;
+    line-height:130%;
+    text-decoration:none;
+    font-weight:bold;
+    color:#565656;
+    cursor:pointer;
+    width:auto;
+    overflow:visible;
+    padding:4px 10px 3px 7px; /* IE6 */
+}
+#HCB_comment_box input.submit:hover{
+    background-color:#dff4ff;
+    border:1px solid #c2e1ef;
+    color:#336699;
+}
+
+#HCB_comment_box span.home-desc {
+  opacity:0.4;
+}
+
+/* the individual comment display containers */
+#HCB_comment_box div.comment {
+  border: 2px solid white;
+  border-radius 0;
+  background-color: darkblue;
+  margin-bottom: 0.5em;
+  color: white;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+}
+
+/* the moderator message */
+.hcb-mod  b{
+  color: darkblue;
+}
+
+/* next, prev, ok and x link style */
+.hcb-link {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+#HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn,
+#HCB_comment_box #hcb_form textarea, #HCB_comment_box #hcb_form #hcb_form_name {
+	font-family: serif;
+	border: 2px solid white;
+	border-radius 0;
+	color: white;
+}
+#HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+	background-color: blue;
+	border-left-color: lightblue;
+	border-top-color: lightblue;
+	border-bottom-color: darkblue;
+	border-right-color: darkblue;
+}
+#HCB_comment_box #hcb_form textarea, #HCB_comment_box #hcb_form #hcb_form_name {
+	background-color: darkblue;
+}

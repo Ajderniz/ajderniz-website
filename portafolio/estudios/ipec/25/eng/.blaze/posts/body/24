@@ -1,0 +1,42 @@
+<!-- break -->
+<div class=bluebox>
+  <pre>
+osi model: explains how data travels thru networks
+
+open systems interconnection
+
+each layer hangles a specific part of transferring data between devices
+
+layers:
+
+	1 physical: hardware, wired-wireless
+
+	2 data link: makes sure data flows without errors
+
+	3 network: handles the data routing, "like a gps"? assigns ip address to packets
+
+	4 transport: makes sure the data arrives properly at the final destination
+
+	5 session: sets up, manages and closes connections between devices
+
+	6 presentation: translates/encrypts data into a format both devices understand
+
+	7 application: the layer the user interacts with directly
+
+example: sending a file
+
+	1: device connects to wifi to start a transmission
+
+	2: prepares file for sending, checks for errors
+
+	3: assigns destination's ip address to packets
+
+	4: file splits file into packets and sends them individually
+
+	5: sets up a session between the communicating devices
+
+	6: encrypts file and checks it's safe
+
+	7: recipient looks at the file through a client
+  </pre>
+</div>

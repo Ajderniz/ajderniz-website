@@ -1,0 +1,58 @@
+server {
+        root /var/www/webserver;
+        index index.html index.htm index.nginx-debian.html;
+        server_name ajderniz.xyz www.ajderniz.xyz;
+        location / {
+                try_files $uri $uri/ =404;
+
+                fancyindex on;
+                fancyindex_exact_size off;
+		fancyindex_directories_first off;
+                fancyindex_localtime on;
+                fancyindex_time_format "%d/%m/%y %H:%M";
+                fancyindex_header "/res/.fancyindex/header.html";
+                fancyindex_footer "/res/.fancyindex/footer.html";
+                fancyindex_css_href "/res/css/style.css";
+        }
+
+       location /portafolio/25/cybersec {
+	       rewrite ^/portafolio/25/cybersec/(.*)$ /portafolio/estudios/ipec/25/$1 permanent;
+       }
+
+        error_page 403 /res/.error/403.html;
+        location /res/.error/403.html {
+                internal;
+        }
+        error_page 404 /res/.error/404.html;
+        location /res/.error/404.html {
+                internal;
+        }
+
+        types {
+                text/plain sh;
+                text/plain odin;
+                text/plain md;
+        }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/ajderniz.xyz/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/ajderniz.xyz/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+server {
+    if ($host = www.ajderniz.xyz) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = ajderniz.xyz) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+        listen 80 ;
+        server_name ajderniz.xyz www.ajderniz.xyz;
+    return 404; # managed by Certbot
+}
+

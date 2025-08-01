@@ -1,0 +1,88 @@
+<!-- break -->
+<p>
+These exercises were completed after watching the following
+<a href="https://youtu.be/Vt7kXpAaqGo">YouTube video</a>.
+</p>
+<h2>1. What is an embedded system?</h2>
+<div class=bluebox>
+	<p>
+	"An embedded system is a special-purpose computer, custom-built to serve
+	a specific purpose."
+	</p>
+</div>
+<h2>2. What is a specific purpose device or computer?</h2>
+<div class=bluebox>
+	<p>
+	A custom-made computer, made to serve a particular function.
+	</p>
+</div>
+<h2>3. What are general purpose devices or computers?</h2>
+<div class=bluebox>
+	<p>
+	Computers that we use every day--as in, <em>consciously</em> use, being
+	aware that they are computers--, which are designed to fulfill more than
+	one purpose.
+	</p>
+</div>
+<h2>4. Write 3 examples of specific purpose devices</h2>
+<div class=bluebox>
+	<ul>
+		<li>Calculators</li>
+		<li>Digital wristwatches</li>
+		<li>Electronic typewriters</li>
+	</ul>
+</div>
+<h2>5. Write 3 examples of general-purpose devices</h2>
+<div class=bluebox>
+	<ul>
+		<li>Desktop and laptop PCs</li>
+		<li>Smartphones and tablets</li>
+		<li>Smart TVs and other unnecesarily "smart" devices</li>
+	</ul>
+</div>
+<h2>6. What are the three types of embedded systems?</h2>
+<div class=bluebox>
+	<ul>
+		<li>Subsystem</li>
+		<li>Standalone system</li>
+		<li>Networked system</li>
+	</ul>
+</div>
+<h2>7. Define and write two examples of every embedded system</h2>
+<div class=bluebox>
+	<ul>
+		<li>
+		<b>Subsystem</b>: The origin of the therm "embedded system".
+		This one's a sub-part of another system. Two examples are:
+		<ul>
+			<li>A digital dashboard, embedded into a car.</li>
+			<li>
+			A computerized controller, embedded into a home
+			appliance, like a microwave oven or a washing machine's
+			console.
+			</li>
+		</ul>
+		</li>
+		<li>
+		<b>Standalone system</b>: The device performs its own thing,
+		independently. Two examples are:
+		<ul>
+			<li>An MP3 player.</li>
+			<li>A digital camera.</li>
+		</ul>
+		</li>
+		<li>
+		<b>Networked system</b>: A group of <em>physically separate</em>
+		electronic devices, which perform a collective function. When
+		seen from a global perspective, this is the abomination they
+		call the "Internet of Things". Two examples are:
+		<ul>
+			<li>A remotely-operated AC system.</li>
+			<li>
+			A door on the front of your house, that closes in on you
+			if it hears you say no-no words banned by Google.
+			</li>
+		</ul>
+		</li>
+	</ul>
+</div>

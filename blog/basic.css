@@ -1,0 +1,188 @@
+:root {
+	--main-width: 640px;
+	--color-1: #FFBE00;
+	--color-2: darkblue;
+	--side-padding: 8px;
+	--default-border: 2px solid white;
+
+	--init-circle-size: 1px;
+	--fin-circle-size: calc(var(--main-width) * 1.5);
+	--circle-num: 6;
+}
+
+body {
+	background-color: var(--color-1);
+	color: black;
+}
+body ::selection, body ::-moz-selection {
+	color: white;
+	background: var(--color-2);
+}
+
+header {
+}
+nav {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-top-right-radius: 24px;
+}
+main {
+	max-width: var(--main-width);
+	margin-left: auto;
+	margin-right: auto;
+
+	/* background-color: var(--color-1); */
+}
+article {
+}
+section {
+}
+aside {
+	position: fixed;
+	top: 0;
+
+	left: calc((50% + (var(--main-width) / 2)) + 16px);
+
+}
+footer {
+	text-align: right;
+}
+
+h1, h2, h3 {
+	font-family: sans;
+}
+p {
+	text-align: justify;
+	text-justify: inter-word;
+	text-indent: 0.5in;
+}
+a {
+	color: var(--color-2);
+}
+a:hover {
+	color: blue;
+}
+
+table {
+	border-collapse: collapse;
+}
+table.bluebox th, table.bluebox td{
+	border: var(--default-border);
+	padding-left: var(--side-padding);
+	padding-right: var(--side-padding);
+}
+
+.bluebox {
+	border: var(--default-border); 
+	/* border: 2px solid; */
+	/* border-top-color: gray; */
+	/* border-left-color: gray; */
+	/* border-right-color: white; */
+	/* border-bottom-color: white; */
+
+	color: white;
+	background-color: var(--color-2);
+
+	margin-top: 4px;
+	margin-bottom: 4px;
+
+	padding-left: var(--side-padding);
+	padding-right: var(--side-padding);
+}
+.bluebox a {
+	color: var(--color-1);
+}
+.bluebox a:hover {
+	color: white;
+}
+.bluebox ::selection, .bluebox ::-moz-selection {
+	color: black;
+	background-color: var(--color-1);
+}
+
+.centered-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+.framed-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	
+	max-width: var(--main-width);
+
+	border: var(--default-border);
+	/* border: 2px solid; */
+	/* border-top-color: gray; */
+	/* BOrder-left-color: gray; */
+	/* border-right-color: white; */
+	/* border-bottom-color: white; */
+
+	color: white;
+}
+
+.centered {
+	text-align: center;
+}
+.right {
+	text-align: right;
+}
+
+.circle {
+  background-color: transparent;
+  border-color: transparent;
+  border: 3px solid transparent;
+
+  animation-name: concentric;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(calc(var(--circle-num) * 2));
+
+  border-radius: 50%;
+
+  position: fixed;
+  z-index: -1;
+}
+.circle#circle-1 {
+  animation-delay: 0s;
+}
+.circle#circle-2 {
+  animation-delay: 1s;
+}
+.circle#circle-3 {
+  animation-delay: 2s;
+}
+.circle#circle-4 {
+  animation-delay: 3s;
+}
+.circle#circle-5 {
+  animation-delay: 4s;
+}
+.circle#circle-6 {
+  animation-delay: 5s;
+}
+@keyframes concentric {
+  from {
+    width: var(--init-circle-size);
+    height: var(--init-circle-size);
+    left: calc(50% - (var(--init-circle-size) / 2));
+    top: calc(55px - (var(--init-circle-size) / 2));
+    border-color: black;
+  }
+  to {
+    width: var(--fin-circle-size);
+    height: var(--fin-circle-size);
+    left: calc(50% - (var(--fin-circle-size) / 2));
+    top: calc(200px - (var(--fin-circle-size) / 2));
+    border-color: transparent;
+  }
+}
+
+#summary {
+	border-top-right-radius: 50px;
+}

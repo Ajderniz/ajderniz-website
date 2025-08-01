@@ -1,0 +1,29 @@
+[blog]
+  description = Mandatory portfolio for English course
+  keywords = portafolio, portfolio, english, ingles,
+  lang = en_US
+  posts = 10
+  style = basic.css
+  subtitle = ABSOLUTELY NECESSARY
+  theme = basic.html
+  title = ENGLISH PORTFOLIO
+[color]
+  list = false
+  log = false
+[core]
+  doctype = html
+  editor = vim
+  encoding = UTF-8
+  extension = html
+[feed]
+  baseurl = http://ajderniz.xyz/portafolio/25/cybersec/eng/
+  fullposts = false
+  posts = 10
+[post]
+  author = top
+  date = top
+  tags = top
+[user]
+  email = ajderniz@gmail.com
+  name = Axel Lopez
+  nickname = Ajderniz

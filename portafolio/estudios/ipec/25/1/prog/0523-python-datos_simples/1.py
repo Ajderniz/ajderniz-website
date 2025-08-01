@@ -1,0 +1,2 @@
+cadena = "Programación"
+print(cadena)

@@ -1,0 +1,64 @@
+<!-- break -->
+<h2>What is Microsoft Word?</h2>
+<div class=bluebox>
+	<p>
+	Do you really need me to explain what that is? Word. It's Word. The word
+	processor everyone uses, and that now has an implementation that sucks
+	on that cloud thing. What was it called? 365? It's got a different name
+	now, right? These MS MFs really love terrible naming conventions.
+	</p>
+	<p>
+	But really, I can't stand using the web browser version, same as the
+	other members of the Office suite. I've had to use it so many times over
+	the years, and it's like it manages to find new, unique ways to keep
+	getting worse. Really makes you think, how is it that we've allowed
+	software to get this bad-
+	</p>
+</div>
+<h2>How to write documents</h2>
+<h3>(on Word or on anything really)</h3>
+<div class=bluebox>
+	<p>
+	I've got a secret, secret secret. I have the key to stop all word
+	processor-related suffering around the globe. Guess what it is!
+	</p>
+	<p>
+	<strong>THAT'S RIGHT!</strong> Wait, no, that's not it. I meant content,
+	focus on content. Formatting and styling comes later-unless you've got a
+	template, in which case you can already focus on the content.
+	</p>
+	<p>
+	And what do I mean by "focusing on content", you ask? Well, it's simple,
+	when you want to write a document, all you need to worry about is
+	writing a damn good document, not about the margins, the indentations,
+	the font types, sizes, styles...
+	</p>
+	<p>
+	There is still space for semantics and hierarchical organization, as
+	these help to better arrange the flow of the content; but, generally
+	speaking, all there is to that is very simple, and can be found in
+	simpler document formatting tools, such as Markdown.
+	</p>
+</div>
+<h2>Markdown plug</h2>
+<h3>(I don't even use it that much)</h3>
+<div class=bluebox>
+	<p>
+	Aside from headers and lists, Markdown offers little in the way of
+	document formatting, so it is an ideal language for writing documents
+	which focus on the content. Because it is written in plaintext, it is
+	also lightweight and does not need a bloated suite to edit or render.
+	</p>
+	<p>
+	Yet, if you do not like the idea of using Notepad to write a serious
+	document, and are, for example, forced into a situation where you must
+	stick to an outdated, aesthetically deplorable format, such as a college
+	paper, with a cover, table of contents and all that, you can always use
+	your fatty little Word thing. I'm not your dad.
+	</p>
+	<p>
+	In the end, though, you'll notice that the most outlandish features
+	you'll ever use will be things like graphics and tables (the last of
+	which, by the way, Markdown also supports).
+	</p>
+</div>

@@ -1,0 +1,44 @@
+<!-- break -->
+<p>
+I already wrote of this before in one of the replies over at the 
+<a href="%post[4]%">Office Automation Worksheet</a>.
+</p>
+<h2>Of the bits and the flowers</h2>
+<div class=bluebox>
+	<p>
+	Once upon a time, there was a <em>bit</em> of data so small, its only
+	name could be that of "bit". It could only hold a value which swayed
+	between one value and the other, and nothing else. An eternal
+	<i>YES-NO</i>, <i>ON-OFF</i>, <i>0-1</i>.
+	</p>
+	<p>
+	And what of the flowers? I don't know.
+	</p>
+	<img class="centered-img" src="./bit.png" alt="a bit">
+</div>
+<h2>And along came the byte</h2>
+<div class=bluebox>
+	<p>
+	The thing about bits, is that they were very small, and meaningless, by
+	themselves; and there were too many of them, even in the older
+	computers. It was not very practical to have every sigle bit have a
+	house by itself, since it would take the same amount of bits as there
+	were on a machine, just to properly be able to address them.
+	</p>
+	<p>
+	So a bunch of bits decided to get together and form a row of--usually--8
+	bits. This way, they could represent values and have reasonably-sized,
+	8, 16, 32, and then 64-bit addresses.
+	</p>
+	<img class="centered-img" src="./byte.png" alt="a byte">
+</div>
+<h2>In the beginning was the Word...</h2>
+<div class=bluebox>
+	<p>
+	... and the Word was an arranged set of bits, similar to the byte; in
+	this case, the lenght of a word was--again, usually--32 bits, or what's
+	to say, 4 bytes. After the word, larger arrangements were the long word
+	(64-bits or 8 bytes), and the quad word (128-bits or 16 bytes).
+	</p>
+	<img class="centered-img" src="./word.png" alt="a word">
+</div>

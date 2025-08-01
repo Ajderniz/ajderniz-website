@@ -1,0 +1,30 @@
+"SIEM"
+
+"SIEM" significa, en sus siglas en inglés, "información de seguridad y gestión
+de eventos".
+
+Mientras que herramientas como "en-map" y "SuperScan" se enfocaban en el mapeo
+de redes y el escaneo de puertos, "SIEM" asume un rol que se puede interpretar
+como a la defensiva.
+
+A grandes rasgos, "SIEM" se puede identificar como una tecnología (no un
+programa en concreto) empleado por las organizaciones para recolectar todos los
+informes y registros relacionados con la seguridad del sistema, en tiempo real,
+de manera centralizada, orientándose al paradigma de eventos. No me digan que
+no saben qué es eso.
+
+Las cuatro funciones principales de "SIEM" son:
+
+la correlación, por medio de la cual se analizan los incidentes de varios
+sistemas o aplicaciones, acelerando así la detección de amenazas y por lo tanto,
+la capacidad de reacción ante éstas;
+
+la agregación, la cual implica la fusión de los registros, deshaciéndose de la
+información redundante;
+
+el análisis forense, el cual es toda una carrera por sí mismo, pero que en
+síntesis se trata de buscar entre registros información que puede resultar útil
+para investigar un incidente;
+
+y la retención, o sea, que facilita la revisión de los datos sobre los eventos,
+mediante el monitoreo en tiempo real y resúmenes a largo plazo.

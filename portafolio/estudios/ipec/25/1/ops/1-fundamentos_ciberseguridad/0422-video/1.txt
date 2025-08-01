@@ -1,0 +1,8 @@
+Existen muchos programas orientados hacia este fin. Cada herramienta ofrece un
+rango de funciones que la hace adecuada para una función u otra. Algunos
+ejemplos de estas herramientas, que en definitiva no copiamos directo desde
+Netacad para hacer este video cochino, son: SuperScan, SIEM, GFI LANguard,
+Tripwire, Nessus, L0pthCrack y Metasploit. 
+
+Vamos a hacer examen después de esto, así que más les vale aprenderse de memoria
+todos los nombres de estos programas obsoletos.

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/res/css/style.css">
+	<title>Investigación con OWASP</title>
+</head>
+
+<body>
+<main>
+
+<h2><a href="/">AJDERNIZ</a></h2>
+
+<h1>Investigación con <a href="https://owasp.org">OWASP</a></h1>
+
+<h2><a href="https://owasp.org/Top10">Top 10</a></h2>
+<table class=bluebox>
+<tbody>
+	<tr>
+		<th>Categoría</th>
+		<th>Descripción</th>
+		<th>Prevención</th>
+	</tr>
+	<tr>
+		<td>
+		<a href="https://owasp.org/Top10/A04_2021-Insecure_Design/">
+			Diseño inseguro</a>
+		</td>
+		<td>
+		El producto implica, por diseño, defectos de seguridad, los
+		cuales no pueden ser remedidados por una "implementación
+		perfecta".
+		</td>
+		<td>
+		Tomar en cuenta asuntos de seguridad al desarrollar el diseño de
+		un producto, en especial si es muy complejo.
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">
+			Configuración errónea de seguridad</a>
+		</td>
+		<td>
+		Un producto presenta mala configuración en la forma de
+		contraseñas por defecto, características innecesarias activadas,
+		insuficiente endurecimiento, entre otros ejemplos.
+		</td>
+		<td>
+		<ul>
+			<li>
+			Realizar chequeos frecuentes de endurecimiento.
+			</li>
+			<li>
+			Incorporar un sistema de auditoría de endurecimiento.
+			</li>
+			<li>
+			Eliminar todos los servicios y módulos innecesarios.
+			</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<a href="https://owasp.org/Top10/A02_2021-Cryptographic_Failures/">
+			Fallos criptográficos</a>
+		</td>
+		<td>
+		El producto no oculta satisfactoriamente detalles
+		confidenciales, haciendo posible que éstos sean accesados por
+		usuarios no autorizados.
+		</td>
+		<td>
+		<ul>
+			<li>
+			Clasificar los flujos de información, para determinar un
+			rango de sensibilidad.
+			</li>
+			<li>
+			Implementar el cifrado de datos confidenciales.
+			</li>
+		</ul>
+		</td>
+	</tr>
+</tbody>
+</table>
+
+<h2><a href="https://owasp.org/www-community">Comunidad</a></h2>
+<h3>Vulnerabilidades</h3>
+<table class=bluebox>
+<tbody>
+	<tr>
+		<th>Vulnerabilidad</th>
+		<th>Descripción</th>
+		<th>Prevención</th>
+	</tr>
+	<tr>
+		<td>
+		<a href="https://owasp.org/www-community/attacks/CSV_Injection">
+			Inyeccción de CSV/Inyección de fórmula</a>
+		</td>
+		<td>
+		Se insertan fórmulas maliciosas en celdas de hojas de cálculo,
+		propiciando acceso no deseado en un host víctima.
+		</td>
+		<td>
+		<ul>
+			<li>
+			Desalentar la descarga y visualización de archivos de
+			hojas de cálculo de fuentes no confiables.
+			</li>
+			<li>
+			Si es absolutamente necesario, revisar que no hayan
+			fórmulas en celdas donde no deberían de haber.
+			</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<a href="https://owasp.org/www-community/attacks/xss/">
+			Cross-Site Scripting (XSS)</a>
+		</td>
+		<td>
+		Cuando se insertan <i>scripts</i> maliciosos en sitios web
+		normalmente confiables.
+		</td>
+		<td>
+		<ul>
+			<li>
+			Tratar la entrada de usuario como texto, sin interpretar
+			secuencias de escape o caracteres especiales como algo
+			más que caracteres.
+			</li>
+			<li>
+			Validar aportes de usuarios antes de incorporar
+			dentro de un sitio.
+			</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<a href="https://owasp.org/www-community/attacks/SQL_Injection">
+			Inyección de SQL</a>
+		</td>
+		<td>
+		Inserción de consultas o comandos maliciosos dentro de un campo
+		de entrada, con el fin de extraer o insertar información en una
+		base de datos.
+		</td>
+		<td>
+		<ul>
+			<li>
+			Validar la entrada de usuario antes de procesarla.
+			</li>
+			<li>
+			Proveer un formato estricto para los campos de ingreso.
+			</li>
+			<li>
+			No permitir que la aplicación interactúe directamente
+			con el servidor de base de datos.
+			</li>
+		</ul>
+		</td>
+	</tr>
+</tbody>
+</table>
+
+<h3>Ataques</h3>
+<table class=bluebox>
+<tbody>
+	<tr>
+		<th>Ataque</th>
+		<th>Descripción</th>
+		<th>Prevención</th>
+	</tr>
+	<tr>
+		<td>
+		<a href="https://owasp.org/www-community/vulnerabilities/Overly_Permissive_Regular_Expression">
+			Expresiones regulares muy laxas</a>
+		</td>
+		<td>
+		Se usan expresiones regulares (<i>RegEx</i>) con parámetros muy
+		amplios, que podrían utilzarse para llevar a cabo un ataque de
+		inyección.
+		</td>
+		<td>
+		<ul>
+			<li>
+			Evitar utilizar expresiones regulares con comodines muy
+			flexibles, como ".*".
+			</li>
+			<li>
+			Evitar el uso de expresiones regulares en general, si no
+			son verdaderamente necesarias.
+			</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<a href="https://owasp.org/www-community/vulnerabilities/Buffer_Overflow">
+			Buffer overflow</a>
+		</td>
+		<td>
+		Se presenta la posibilidad de que una entrada de usuario asigne
+		más memoria de la deseada en la pila (<i>stack</i>), haciendo
+		posible que se sobreescriba información de forma inesperada.
+		</td>
+		<td>
+		<ul>
+			<li>
+			No confiar en la entrada de usuario.
+			</li>
+			<li>
+			Delimitar un rango estático para el campo de ingreso del
+			usuario.
+			</li>
+			<li>
+			Avitar usar asignación dinámica de memoria.
+			</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<a href="https://owasp.org/www-community/vulnerabilities/Memory_leak">
+			Fuga de memoria</a>
+		</td>
+		<td>
+		La memoria asignada a la pila (<i>stack</i>) no es des-asignada,
+		ocasionando que el programa utilice más memoria de la que es
+		necesaria.
+		</td>
+		<td>
+		<ul>
+			<li>
+			Des-asignar la memoria dinámica asignada tan pronto deja
+			de ser necesaria.
+			</li>
+			<li>
+			Evitar utilizar memoria dinámica cuando no sea
+			necesaria.
+			</li>
+			<li>
+			Utilizar lenguajes de programación con recolección de
+			basura.
+			</li>
+		</ul>
+		</td>
+	</tr>
+</tbody>
+</table>
+
+</main>
+</body>
+</html>

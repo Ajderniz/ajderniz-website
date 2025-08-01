@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/res/css/style.css">
+  <title>Práctica: cifrado de Vigenere</title>
+<style>
+ol > li { margin: 12px 0; }
+</style>
+</head>
+
+<body>
+<main>
+
+<h2><a href="/">AJDERNIZ</a></h2>
+
+<h3>
+Ciberseguridad<br>
+Alumno: Axel López<br>
+Grupo: IC<br>
+Profesor: Johel Solano Quirós
+</h3>
+
+<h1>Práctica: deszifrado en Vigenere</title>
+
+<h2>Trampa</h2>
+<div class=bluebox>
+  <p>
+  Lo cierto es que tanta bailadera de columnas y filas me enreda bastante.
+  Nuevamente, me dio pereza. Lo bueno es que el cifrado de Vigenere consiste en
+  sumar el índice de cada letra del mensaje al índice de la letra
+  correspondiente en la clave. El descifrado es exactamente lo contrario: la
+  resta.
+  </p>
+  <p>
+  Agreggué un poco de código al programa que escribí para
+  <a href="./0407-m18-practica_zifrado.html">la práctica de cifrado
+    anterior</a>. El resultado es el siguiente:
+  </p>
+  <pre style="background-color:black">
+#include <stdio.h>
+#include <stdlib.h> /* calloc */
+#include <string.h> /* strlen, strcmp */
+
+int main(int argc, char **argv){
+
+  int alphabet_size;
+
+  int index;
+  int key_index;
+
+  size_t message_length;
+  size_t key_length;
+
+  char *message = NULL;
+  char *key = NULL;
+  char *option = NULL;
+  char *encrypted_message = NULL;
+
+  if (argc != 4) {
+    puts("Invalid amount of arguments");
+    puts("Proper syntax: ./vigenere \"MESSAGE\" \"KEY\" [-encrypt | -decrypt]");
+    return EXIT_FAILURE;
+  }
+
+  alphabet_size = ('Z' - 'A') + 1;
+
+  message = argv[1];
+  message_length = strlen(message);
+  for (index = 0; index < message_length; index++) {
+    if (message[index] < 'A' || 'Z' < message[index]) {
+      if (message[index] < 'a' || 'z' < message[index]) {
+        if (message[index] != ' ') {
+          puts("Invalid message");
+          return EXIT_FAILURE;
+        }
+      }
+      message[index] = toupper(message[index]);
+    }
+  }
+
+  key = argv[2];
+  key_length = strlen(key);
+  for (index = 0; index < key_length; index++) {
+    if (key[index] < 'A' || 'Z' < key[index]) {
+      if (key[index] < 'a' || 'z' < key[index]) {
+        puts("Invalid key");
+        return EXIT_FAILURE;
+      }
+      key[index] = toupper(key[index]);
+    }
+  }
+
+  option = argv[3];
+
+  encrypted_message = calloc(sizeof(char), message_length + 1);
+  if (NULL == encrypted_message) {
+    puts("Could not allocate encrypted_message");
+    return EXIT_FAILURE;
+  }
+
+  if (0 == strcmp(option, "-encrypt")) {
+
+    puts("M K E");
+    puts("=====");
+    for(index = 0, key_index = 0; index < message_length;
+        index++, key_index = (key_index + 1) % key_length) {
+      if (' ' == message[index]) {
+        encrypted_message[index] = message[index];
+        puts("");
+        index++;
+      }
+      encrypted_message[index] =
+        (message[index] + key[key_index]) % alphabet_size + 'A';
+      printf("%c %c %c\n", message[index], key[key_index],
+          encrypted_message[index]);
+    }
+    encrypted_message[message_length] = '\0';
+
+    printf("Message: %s\n", message);
+    printf("Key: %s\n", key);
+    printf("Encrypted: %s\n", encrypted_message);
+
+  } else if (0 == strcmp(option, "-decrypt")) {
+
+      puts("M K D");
+      puts("=====");
+      for(index = 0, key_index = 0; index < message_length;
+          index++, key_index = (key_index + 1) % key_length) {
+        if (' ' == message[index]) {
+          encrypted_message[index] = message[index];
+          puts("");
+          index++;
+        }
+        encrypted_message[index] =
+          (message[index] - key[key_index] + alphabet_size) % alphabet_size + 'A';
+        printf("%c %c %c\n", message[index], key[key_index],
+            encrypted_message[index]);
+      }
+      encrypted_message[message_length] = '\0';
+
+      printf("Message: %s\n", message);
+      printf("Key: %s\n", key);
+      printf("Decrypted: %s\n", encrypted_message);
+
+  } else {
+    puts("Invalid option parameter passed");
+    puts("The only options are: '-encrypt' and '-decrypt'");
+  }
+
+
+  free(encrypted_message);
+  return EXIT_SUCCESS;
+}
+
+  </pre>
+</div>
+
+<h2>Lista de mensajes para descifrar</h2>
+
+<div class=bluebox>
+
+  <p>La clave para todos los mensajes es: <strong>TECNOLOGIA</strong>.
+
+  <ol>
+    <li>
+    <ul>
+      <li>
+      <b>Mensaje</b>: JWRHTST AD JHKRFBMRPOW
+      </li>
+      <li>
+      <b>Cifrado</b>: QSPUFHF UV JOGPSNBDJGW
+      </li>
+    </ul>
+    </li>
+
+    <li>
+    <ul>
+      <li>
+      <b>Mensaje</b>: UHWIPXXGJ FF XRTIIPYN
+      </li>
+      <li>
+      <b>Cifrado</b>: BDUVBMJAB FM TPGUXBSF
+      </li>
+    </ul>
+    </li>
+
+    <li>
+    <ul>
+      <li>
+      <b>Mensaje</b>: YSFFXBIH CVM IDHDE
+      </li>
+      <li>
+      <b>Cifrado</b>: FODSJQUB UVT EBUPT
+      </li>
+    </ul>
+    </li>
+
+    <li>
+    <ul>
+      <li>
+      <b>Mensaje</b>: WTQTXSJYJ MU WHR
+      </li>
+      <li>
+      <b>Cifrado</b>: DPOGJHVSB MB SFE
+      </li>
+    </ul>
+    </li>
+
+    <li>
+    <ul>
+      <li>
+      <b>Mensaje</b>: USDZXLP SXT LNHGVAh
+      </li>
+      <li>
+      <b>Cifrado</b>: BOBMJAB MPT SJFTHPT
+      </li>
+    </ul>
+    </li>
+  </ol>
+</div>
+  
+</body>
+</html>

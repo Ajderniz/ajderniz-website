@@ -1,0 +1,13 @@
+Fonts:
+
+ - DOS/V re. ANK16: https://int10h.org/oldschool-pc-fonts/fontlist/font?dos-v_re_ank16
+ - DOS/V re. ANK30: https://int10h.org/oldschool-pc-fonts/fontlist/font?dos-v_re_ank30
+
+Music:
+
+ - Paul De Bra: Erik Satie - Gnossienne No. 1 For 4 Accordions and Bass Accordion:
+   https://imslp.org/wiki/Special:ReverseLookup/944593
+
+Web implementation:
+
+  - Karl Zylinski https://github.com/karl-zylinski/odin-raylib-web

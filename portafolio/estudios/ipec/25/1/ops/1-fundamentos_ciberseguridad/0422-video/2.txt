@@ -1,0 +1,7 @@
+Una gran área en el contexto de las pruebas de seguridad de redes, es la de las
+pruebas de... je, je, penetración; también conocido como "Pentesting", que en
+términos sencillos, se trata de intentar "hackear" una infraestructura de redes,
+para probar qué tan segura es ésta.
+
+Existen varias herramientas que se pueden emplear para este fin. Las que vamos a
+explorar hoy son, "en-map" y "SuperScan".

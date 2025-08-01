@@ -1,0 +1,18 @@
+"en-map"
+
+"en-map" es una herramienta accesible a todo el público, o sea que no está
+restringida bajo ningún sistema operativo ni licencia.
+
+Se trata de una herramienta básica, con varias funciones orientadas hacia el
+mapeo de redes, lo que se puede traducir en descubrir puertos abiertos y demás
+vulnerabilidades en una red. "en-map" se enfoca en la capa 3 del modelo OSI, lo
+cual no vamos a explicar porque es algo tan intuitivo que todos ya lo sabemos.
+No se hagan, eso también sale en el examen.
+
+Lo que "en-map" hace puede llegar a ser bastante sofisticado, pero algunas de
+sus funciones básicas son el escaneo de puertos TCP y UDP, barrido de puertos,
+el escaneo sigiloso (que es... sigiloso), y la identificación remota de sistemas
+operativos.
+
+La información recoplilada por "en-map" puede resultar útil en el análisis de
+seguridad de redes. Así que recuerden que "en-map" es... algo bueno.

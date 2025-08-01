@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/res/css/style.css">
+	<title>Práctica: cifrado de Vigenere</title>
+<style>
+ol > li { margin: 12px 0; }
+</style>
+</head>
+
+<body>
+<main>
+
+<h2><a href="/">AJDERNIZ</a></h2>
+
+<h1>Práctica: cifrado de Vigenere</title>
+
+<h2>Trampa</h2>
+<div class=bluebox>
+	<p>
+	Me dio pereza hacer el cifrado a mano, entonces escribí un programa en C
+	para hacerlo automáticamente.
+	</p>
+	<pre style="background-color: black;">
+#include <stdio.h>
+#include <stdlib.h> /* calloc */
+#include <string.h> /* strlen */
+
+int main(int argc, char **argv) {
+
+	int alphabet_size;
+
+	int index;
+	int key_index;
+
+	size_t message_length;
+	size_t key_length;
+
+	char *message = NULL;
+	char *key = NULL;
+	char *encrypted_message = NULL;
+
+	if (argc != 3) {
+		puts("Not enough arguments");
+		return EXIT_FAILURE;
+	}
+
+	alphabet_size = ('Z' - 'A') + 1;
+
+	message = argv[1];
+	message_length = strlen(message);
+	for (index = 0; index < message_length; index++) {
+		if (message[index] < 'A' || 'Z' < message[index]) {
+			if (message[index] != ' ') {
+				puts("Invalid message");
+				return EXIT_FAILURE;
+			}
+		}
+	}
+
+	key = argv[2];
+	key_length = strlen(key);
+	for (index = 0; index < key_length; index++) {
+		if (key[index] < 'A' || 'Z' < key[index]) {
+			puts("Invalid key");
+			return EXIT_FAILURE;
+		}
+	}
+
+	encrypted_message = calloc(sizeof(char), message_length + 1);
+	if (NULL == encrypted_message) {
+		puts("Could not allocate encrypted_message");
+		return EXIT_FAILURE;
+	}
+
+	puts("M K E");
+	puts("=====");
+	for(index = 0, key_index = 0; index < message_length;
+			index++, key_index = (key_index + 1) % key_length) {
+		if (' ' == message[index]) {
+			encrypted_message[index] = message[index];
+			puts("");
+			index++;
+		}
+		encrypted_message[index] =
+			(message[index] + key[key_index]) % alphabet_size + 'A';
+		printf("%c %c %c\n", message[index], key[key_index],
+				encrypted_message[index]);
+	}
+	encrypted_message[message_length] = '\0';
+
+	printf("Message: %s\n", message);
+	printf("Key: %s\n", key);
+	printf("Encrypted: %s\n", encrypted_message);
+
+	free(encrypted_message);
+	return EXIT_SUCCESS;
+}
+	</pre>
+</div>
+
+<h2>Lista de mensajes para cifrar</h2>
+
+<div class=bluebox>
+	<ol>
+		<li>
+		<ul>
+			<li>
+			<b>Mensaje</b>: LA SEGURIDAD ES IMPORTANTE
+			</li>
+			<li>
+			<b>Clave</b>: CLAVE
+			</li>
+			<li>
+			<b>Cifrado</b>: NL SZKWCIYEF PS DQRZROEPEE
+			</li>
+		</ul>
+		</li>
+		<li>
+		<ul>
+			<li>
+			<b>Mensaje</b>: LOS DATOS DEBEN ESTAR PROTEGIDOS
+			</li>
+			<li>
+			<b>Clave</b>: REDES
+			</li>
+			<li>
+			<b>Cifrado</b>: CSV HSKSV HWSIQ IKKEU TJFXHKAUSV
+			</li>
+		</ul>
+		</li>
+		<li>
+		<ul>
+			<li>
+			<b>Mensaje</b>: EL CIFRADO VIGENERE ES SEGURO
+			</li>
+			<li>
+			<b>Clave</b>: CIFRA
+			</li>
+			<li>
+			<b>Cifrado</b>: GT HZFTIIF VKOJEETM JJ SGOZIO
+			</li>
+		</ul>
+		</li>
+		<li>
+		<ul>
+			<li>
+			<b>Mensaje</b>: MANTENER LA INFORMACION SEGURA
+			</li>
+			<li>
+			<b>Clave</b>: SEGURIDAD
+			</li>
+			<li>
+			<b>Cifrado</b>: EETNVVHR OS MTZFZPAFAST MVOXRD
+			</li>
+		</ul>
+		</li>
+		<li>
+		<ul>
+			<li>
+			<b>Mensaje</b>: ENCRIPTAR LOS MENSAJES ES CLAVE
+			</li>
+			<li>
+			<b>Clave</b>: MENSAJE
+			</li>
+			<li>
+			<b>Cifrado</b>: QRPJIYXMV YGS VIZWNBEB IE GYSVN
+			</li>
+		</ul>
+		</li>
+		<li>
+		<ul>
+			<li>
+			<b>Mensaje</b>: LA INFORMACION PRIVADA ES VALIOSA
+			</li>
+			<li>
+			<b>Clave</b>: PRIVADO
+			</li>
+			<li>
+			<b>Cifrado</b>: AR QIFRFBRKDOQ DGZDVDD SH MIGIRGP
+			</li>
+		</ul>
+		</li>
+		<li>
+		<ul>
+			<li>
+			<b>Mensaje</b>: DEBEMOS USAR CLAVES SEGURAS SIEMPRE
+			</li>
+			<li>
+			<b>Clave</b>: PROTECCION
+			</li>
+			<li>
+			<b>Cifrado</b>: SVPXQQU CGNG TZTZGU ASTJIOL WKGUDET
+			</li>
+		</ul>
+		</li>
+		<li>
+		<ul>
+			<li>
+			<b>Mensaje</b>: LOS SISTEMAS DEBEN SER CONFIABLES
+			</li>
+			<li>
+			<b>Clave</b>: SEGURIDAD
+			</li>
+			<li>
+			<b>Cifrado</b>: DSY MZAWEPSW JYSMQ SHJ GUHWQDBOWW
+			</li>
+		</ul>
+		</li>
+		<li>
+		<ul>
+			<li>
+			<b>Mensaje</b>: EL INTERNET ES UN LUGAR PELIGROSO
+			</li>
+			<li>
+			<b>Clave</b>: CIBER
+			</li>
+			<li>
+			<b>Cifrado</b>: GT JRKGZOIK GA VR CWOBV GGTJKIQAP
+			</li>
+		</ul>
+		</li>
+		<li>
+		<ul>
+			<li>
+			<b>Mensaje</b>: LOS ATAQUES CIBERNETICOS SON FRECUENTES
+			</li>
+			<li>
+			<b>Clave</b>: DEFENSA
+			</li>
+			<li>
+			<b>Cifrado</b>: OSX EGSQXIX GVTEURJXVUOV WTR SJEFYJRGWS
+			</li>
+		</ul>
+		</li>
+	</ol>
+</div>
+	
+</body>
+</html>

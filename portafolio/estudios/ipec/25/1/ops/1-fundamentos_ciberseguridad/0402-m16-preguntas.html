@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/res/css/style.css">
+	<title>
+	Cybserecuty Essentials 16: Firewalls de políticas basados en zonas
+	</title>
+</head>
+
+<body>
+<main>
+
+<h2><a href="/">AJDERNIZ</a></h2>
+
+<h2>Cybersecurity Essentials</h2>
+<h1>Módulo 16: Firewalls de políticas basados en zonas</h1>
+
+<h3>¿Cuáles son los dos modelos de configuración para Cisco IOS Firewall?</h3>
+<div class=bluebox>
+	<ul>
+		<li>Classic Firewall</li>
+		<li>Zone-based Policy Firewall (ZPF)</li>
+	</ul>
+</div>
+<h3>¿Qué define una zona de seguridad en el modelo ZPF?</h3>
+<div class=bluebox>
+	<p>
+	"Una frontera donde el tráfico se somete a las restricciones de las
+	políticas al pasar a otra región de la red."
+	</p>
+</div>
+<h3>
+¿Cómo afecta la adición de una interfaz a una zona privada en el tráfico?
+</h3>
+<div class=bluebox>
+	<p>
+	Todos los <i>hosts</i> conectados a la interfaz pueden pasar tráfico a
+	todos los hosts de interfaces existentes en la misma zona.
+	</p>
+</div>
+<h3>¿Cuál es la postura de seguridad predeterminada del enrutador en ZPF?</h3>
+<div class=bluebox>
+	<p>
+	Si se refiere a las reglas de tráfico para la zona propia
+	(<i>self-zone</i>) del <i>router</i>, la postura es de
+	<i>INSPECCIONAR</i> todo el tráfico para el cual exista un par de zonas
+	(<i>zone-pair</i>) y una política; el resto se deja <i>PASAR</i>.
+	</p>
+	<p>
+	En términos más generales, se asume que se <i>DESCARTA</i> todo el
+	tráfico que origine de una interfaz sin zona, y entre zonas distintas.
+	</p>
+</div>
+<h3>¿Qué es C3PL y cómo se relaciona con las políticas de tráfico?</h3>
+<div class=bluebox>
+	<p>
+	<i>Cisco Common Classification Policy Language</i>. Es "un método
+	estructurado para crear políticas de tráfico basadas en evento,
+	condiciones y acciones"; en otras palabras, es el lenguage estándar
+	utilizado para crear las reglas de clasificación en las cuales se basan
+	las políticas de tráfico.
+	</p>
+</div>
+<h3>¿Qué se necesita definir entre cada par de zonas de 'origen-destino'?</h3>
+<div class=bluebox>
+	<p>
+	Las zonas de <i>ORIGEN</i> y <i>DESTINO</i>, además de las diferentes
+	políticas (previamente definidas) que se deseen aplicar en el par.
+	</p>
+</div>
+<h3>
+¿Cuáles son los pasos básicos para diseñar una infraestructura física en ZPF?
+</h3>
+<div class=bluebox>
+	<p>
+	En el módulo no se listan <em>pasos</em> en sí, pero sí se indica que se
+	deben de considerar los requisitos de seguridad y disponibilidad (de la
+	infraestructura), lo cual incluye la cantidad de dispositivos vinculados
+	entre zonas seguras y menos seguras, y la cantidad de dispositivos
+	redundantes.
+	</p>
+</div>
+<h3>¿Qué aspectos se deben considerar al crear zonas en ZPF?</h3>
+<div class=bluebox>
+	<ul>
+		<li>Interfaces incluidas en las zonas</li>
+		<li>Nombre de cada zona</li>
+		<li>Tráfico necesario entre zonas</li>
+		<li>Dirección del tráfico entre zonas</li>
+	</ul>
+</div>
+<h3>¿Cómo se define un mapa de clase y para qué se utiliza?</h3>
+<div class=bluebox>
+	<p>
+	Para ZPF, se utiliza el comando:
+		<pre>
+	class-map type inspect [match-any | match-all] nombre-del-mapa
+		</pre>
+	"<i>match-any</i>" indica que el tráfico a inspeccionar debe de
+	coincidir con, al menos, una de las reglas de coincidencia especificadas
+	dentro de sí. "<i>match-all</i>" indica que el tráfico debe de coincidir
+	con todas las reglas.
+	</p>
+	<p>
+	Una vez ingresado a la configuración del mapa de claso, las reglas en sí
+	se definen por medio de cualquiera de los siguientes comandos:
+		<pre>
+	match access-group { numero-acl | nombre-acl }
+	match protocol nombre-protocolo
+	match class-map nombre-mapa-clase
+		</pre>
+	</p>
+	<p>
+	Los mapas de clase sirven para identificar paquetes bajo una misma
+	"etiqueta". Son útiles para agrupar un tipo de flujo que posee una serie
+	de características en común.
+	</p>
+</div>
+<h3>
+¿Cuáles son las tres acciones posibles que ZPF puede tomar al procesar tráfico?
+</h3>
+<div class=bluebox>
+	<ul>
+		<li>
+		<b>PASS</b>: Parecido a <i>permit</i> en una ACL. Simplemente
+		deja pasar el tráfico, sin ejecutar ninguna acción de
+		seguimiento ni registro.
+		</li>
+		<li>
+		<b>DROP</b>: Parecido a <i>deny</i> en una ACL. No deja pasar el
+		tráfico y, opcionalmente, realiza un registro sobre el
+		incidente.
+		</li>
+		<li>
+		<b>INSPECT</b>: Inspecciona el tráfico de acuerdo a las
+		políticas establecidas.
+		</li>
+	</ul>
+</div>
+<h3>¿Qué comando se utiliza para crear un par de zonas en ZPF?</h3>
+<div class=bluebox>
+	<p>
+		<pre>
+	zone-pair security zone nombre-par-zonas ...
+		source { nombre-zona-origen | self } ...
+		destination { nombre-zona-destino | self }
+		</pre>
+	Es necesario haber definido las zonas de origen y destino antes de crear
+	el par zonal.
+	</p>
+</div>
+<h3>
+¿Qué sucede con el tráfico si no se configura una política de servicio para una
+zona?
+</h3>
+<div class=bluebox>
+	<p>
+	Por defecto se <i>DESCARTA</i> todo tráfico inter-zonal para el cual no
+	exista una política de servicio.
+	</p>
+</div>
+<h3>
+¿Qué ocurre si se intenta asignar la misma interfaz a más de una zona en ZPF?
+</h3>
+<div class=bluebox>
+	<p>
+	Se presenta una acción inválida: "Una interfaz no puede pertenecer a
+	varias zonas."
+	</p>
+</div>
+<h3>
+¿Qué se debe hacer antes de aplicar el comando de seguridad miembro de una zona
+a una interfaz?
+</h3>
+<div class=bluebox>
+	<p>
+	Primero, se tienen que seguir los pasos para crear la zona en sí; luego,
+	se tiene que entrar en el modo de configuración de la interfaz por medio
+	del comando:
+		<pre>
+	interface tipo-interfaz numero-interfaz
+		</pre>
+	Una vez se está adentro, para asignar la interfaz a una zona se usa el
+	comando:
+		<pre>
+	zone-member security nombre-zona
+		</pre>
+	</p>
+</div>
+<h3>
+¿Cuál es la acción predeterminada para todo el tráfico no especificado en un
+mapa de políticas?
+</h3>
+<div class=bluebox>
+	<p>
+	La acción predeterminada es <i>DROP</i>.
+	</p>
+</div>
+<h3>¿Qué es necesario hacer para verificar la configuración de ZPF?</h3>
+<div class=bluebox>
+	<p>
+	Primero, se debe comprobar que la configuración es la deseada. Para
+	esto, se pueden ejecutar comandos que muestren la configuración, como:
+		<pre>
+	show run | begin class-map
+		</pre>
+	..., el cual imprime las configuraciones cargadas en el sistema,
+	empezando por las reglas de <i>class-map</i>.
+	</p>
+	<p>
+	Luego, es importante verificar que la configuración esté haciendo lo que
+	en verdad se desea della. Un comando útil para esta función es:
+		<pre>
+	show policy-map type inspect zone-pair sessions
+		</pre>
+	..., el cual muestra la cantidad de paquetes interceptados según una
+	política de servicio, tanto coincidentes con los mapas de clase
+	definidos, como los que no lo son.
+	</p>
+</div>
+<h3>
+¿Cómo se realiza la inspección de paquetes en una política de firewall basada en
+zonas?
+</h3>
+<div class=bluebox>
+	<p>
+	El router hace seguimiento de la conexión o sesión del tráfico, y
+	permite tráfico de retorno relacionado con dicha conexión o sesión.
+	</p>
+</div>
+<h3>
+¿Cuáles son las implicaciones de no configurar adecuadamente las zonas en un
+ZPF?
+</h3>
+<div class=bluebox>
+	<p>
+	Se puede habilitar el tráfico indeseado entre interfaces para las cuales
+	no hay intención de que estén comunicadas.
+	</p>
+</div>
+<h3>
+¿De qué manera el ZPF ofrece un método estructurado y simplificado en
+comparación con el firewall clásico?
+</h3>
+<div class=bluebox>
+	<p>
+	A grandes rasgos, se puede reconocer que se reduce la cantidad de
+	definición de reglas necesarias para controlar el tráfico deseado e
+	indeseado. Por otra parte, la agrupación de <i>hosts</i> para los cuales
+	se impone un régimen de tráfico de red en común, facilita visualizar el
+	modelo desde un punto de vista más abstraído.
+	</p>
+</div>
+<h3>
+¿Qué aspecto se debe tener en cuenta para la documentación y comunicación al
+usar ZPF?
+</h3>
+<div class=bluebox>
+	<ul>
+		<li>
+		Nombramiento intuitivo de las zonas, clases, políticas y pares
+		zonales.
+		</li>
+		<li>
+		Agrupación natural, basada en espacio físico o características
+		comunes de las interfaces.
+		</li>
+	</ul>
+</div>
+
+</main>
+</body>
+</html>
