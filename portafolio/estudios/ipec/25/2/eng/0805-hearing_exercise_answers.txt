@@ -1,0 +1,74 @@
+Slide 61
+
+1: computer
+2: router
+3: Internet Service Provider
+4: wireless
+5: radio
+6: IDK
+7: pages
+
+Slide 62
+
+1: mixed
+2: file server
+3: wire?
+4: broadband modem
+5: router
+6: wireless access point
+
+Slide 63
+
+What is the main idea of the passage?
+a) correcting network problems
+
+What can you infer from the passage?
+b) LAN routers do not work well near walls or metals.
+
+According to the passage, a LAN
+b) requires a router
+
+Slide 64
+
+1 What does the woman want to buy?
+c) a router
+
+2 Why does the woman choose a wireless network?
+b) Her computers are not close to each other.
+
+Slide 65
+
+1 What is the conversation mostly about?
+b) the most appropriate Internet package
+
+2 Why does the woman decline a particular product?
+c) She already has the product.
+
+Slide 66
+
+1: internet service
+2: wireless router
+3: I already have
+4: I recommend our
+5: as fast
+6: save money
+
+Slide 67
+
+1: false
+2: true
+3: false
+
+Slide 68
+
+1. A weblog, or blog, is an electronic journal - e. that displays in chronological order the postings of one or more people.
+2. A peer-to-peer system allows - c. users to share files on their computers.
+3. You can use a search engine to find - a. web pages on a particular subject.
+4. BitTorrent is a peer-to-peer protocol used - b. for downloading files over the Internet.
+5. RSS keeps you constantly informed - d. about fresh, new content on your favorite websites.
+
+1. open-source, editable web pages: wikis
+2. same as electronic retailer, or online store: e-tailer
+3. a blog that includes video: videoblogs
+4. a program that allows you to make voice and video calls from a computer: Skype
+5. an audio broadcast distibuted over the Internet: podcast

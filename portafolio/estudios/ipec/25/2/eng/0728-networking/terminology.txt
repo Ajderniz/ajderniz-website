@@ -1,0 +1,22 @@
+- Network: Group of two or more computers that are interconnected
+- Network adapter: A device that connects the computer to the network
+- Broadband: A type of data transmission in which a single wire can carry several channels at once
+- Backbone: Main network connectsion composing the Internet
+- Cable: Wire :)
+- Attenuation: Reduction in the strenght of a signal
+- Bus: A collection of parallel wires
+- Cat 3: Form of RJ.45. Also known as station wire and VG (voice-grade). Deprecated. Up to 100 Mbit/s
+- Cat 4: Form of RJ.45. Four unshielded twisted pair copper wires, supporting signals up to 20 MHz. Deprecated. Up to 16Mbits/s
+- Cat 5: Form of RJ.45. Used as cabling infrastructure for 10BASE-T (Ethernet), full duplex 100BASE-TX (FastEthernet) and 1000BASE-T (GigabitEthernet) networks. Still used. Up to 100 MHz.
+- Cat 6: Form of RJ.45. Made for GigabitEthernet, backwards compatible with 5/5e and 3 categories. Still used. Up to 250 MHz.
+- Coaxial cable: The guy with a single copper wire at the center
+- Datagram: Single piece of data jumpin' around the corner
+- MAC address: Unique identifier assigned to every machine
+- Optical fiber: Technology that uses glass or plastic threads to transmit data
+- Server: A computer and/or a program that provides a server to a client
+- Protocol: An agreed-upon format for transmitting data between two devices
+- Topology: The shape/structure of a LAN
+- WIMAX: Worldwide Interoperability for Microwave Access. IEEE 802.16m. LTE surpassed it in popularity.
+- Ping: Command used to test the ability of the computer to reach a specified destination
+- VoIP: Voice over IP. Allows users to make and receive phone calls over the internet.
+Vulnerability

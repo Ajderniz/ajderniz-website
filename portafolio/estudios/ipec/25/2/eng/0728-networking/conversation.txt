@@ -1,0 +1,13 @@
+1: Gee, an hour ago, I was perfectly able to connect to my home *server*. Why can't I now?
+
+2: What's wrong? Something *network*-related?
+
+1: Yes, kinda. I need to access my home server's storage, but I can't even *ping* the damn thing's IP.
+
+3: Are you able to connect via its *MAC address*?
+
+1: No, that's not how it works. I'm working with a VPN *topology*.
+
+4: Not that it matters, but over what *protocol*? OpenVPN or Wireguard?
+
+1: I... don't know.
